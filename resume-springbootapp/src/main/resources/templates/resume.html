@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style type="text/css">* {
+    box-sizing: border-box;
+  }
+  input {
+    visibility: hidden;
+  }
+  body,
+  html {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    body,
+    html {
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 992px) {
+    body,
+    html {
+      font-size: 16px;
+    }
+  }
+  .card {
+    background: #000;
+    border-radius: 1.25rem;
+    color: #fff;
+    filter: drop-shadow(5px 5px 5px #000);
+    flex-shrink: 0;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    height: 70vmin;
+    max-height: 420px;
+    padding: 2.5rem;
+    position: absolute;
+    transition: transform 0.25s ease-out;
+    width: 50vmin;
+    max-width: 300px;
+    min-width: 220px;
+    min-height: 308px;
+  }
+  .card:nth-of-type(1) {
+    transform: translate(-40%, 0) rotate(-15deg);
+  }
+  .card__footer {
+    align-items: center;
+    bottom: 30px;
+    display: flex;
+    font-size: 0.75rem;
+    left: 2.5rem;
+    position: absolute;
+    right: 2.5rem;
+  }
+  .card__footer img {
+    height: 2rem;
+    margin-right: 6px;
+    width: 2rem;
+  }
+  .card--answer {
+    color: #000;
+    background: #fff;
+  }
+  #javascript:checked ~ .scene {
+    background: #f8dc3f;
+  }
+  #javascript:checked ~ .scene .card--javascript {
+    transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
+    z-index: 2;
+  }
+  #javascript:checked ~ .scene .card--typescript {
+    transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
+    z-index: 1;
+  }
+  #javascript:checked ~ .scene label[for='typescript'] {
+    z-index: 3;
+  }
+  #typescript:checked ~ .scene {
+    background: #007bc7;
+  }
+  #typescript:checked ~ .scene .card--typescript {
+    transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
+    z-index: 2;
+  }
+  #typescript:checked ~ .scene .card--javascript {
+    transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
+    z-index: 1;
+  }
+  #typescript:checked ~ .scene label[for='Details'] {
+    z-index: 3;
+  }
+  #Details:checked ~ .scene {
+    background: #09f363;
+  }
+  #Details:checked ~ .scene .card--Details{
+    transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
+    z-index: 2;
+  }
+  #Details:checked ~ .scene .card--Details {
+    transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
+    z-index: 1;
+  }
+  #Details:checked ~ .scene label[for='javascript'] {
+    z-index: 3;
+  }
+  label {
+    cursor: pointer;
+    height: 84vmin;
+    position: absolute;
+    transform: translate(40%, 0) rotate(15deg);
+    width: 50vmin;
+  }
+  .scene {
+    align-items: center;
+    background: #db0a5b;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    transition: background 0.25s;
+  }
+  [type='radio'] {
+    position: absolute;
+    opacity: 0;
+  }
+  sub {
+    margin-left: 6px;
+  }
+  
+  </style>
+</head>
+<body>
+<input id="javascript" type="radio" name="choice" checked="checked"/>
+<input id="typescript" type="radio" name="choice"/>
+<input id="Details" type="radio" name="choice"/>
+<div class="scene">
+  <label for="typescript"></label>
+  <label for="Details"></label>
+  <label for="javascript"></label>
+  <div class="card  ">
+    <div class="card__content">Resume....</div>
+  </div>
+  <div class="card card--answer card--javascript">
+    <div class="card__content">Details</div>
+    <div style="font-size: 20px;">
+        Kalisetti Dheeraj<br>
+        15/03/2002<br>
+        10th : 9.0 CGPA<br>
+        11th & 12th : 8.25 CGPA<br>
+        Current Role : Student at <br>
+        K L University<br>
+        year : 3rd<br>
+        Semester : 1st <br>
+        Passout : 2023
+    </div>
+  </div>
+  <div class="card card--answer card--Details">
+    <div class="card__content">Languages</div>
+    <div style="font-size: 20px;">
+        C<br>
+        C++<br>
+        Java <br>
+        Python<br>
+        R Language<br>
+        MySQL<br>
+        SpringBoot<br>
+        Django<br>
+        HTML5,CSS3,javascript<br>
+
+    </div>
+  </div>
+  <div class="card card--answer card--typescript">
+    <div class="card__content">Skills</div>
+    <div style="font-size: 20px;">
+        DevOps<br>
+        Creativity<br>
+        Problem Solving<br>
+        Design<br>
+        Software<br>Fluency in coding languages<br>
+        Spreadsheets<br>
+        Patience<br>
+        Research
+    </div>
+  </div>
+</div> 
+</body>
+</html>
